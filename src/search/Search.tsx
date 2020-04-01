@@ -49,7 +49,7 @@ export default class Search extends React.Component<SearchProps, SearchState> {
     this.setState({ dataReady: false });
 
     /*
-      replace the line below with the api call
+      TODO: replace the line below with the api call
       Kendra.query({ IndexId: indexId, QueryText: queryText, PageNumber: pageNumber})    
     */
     const results = getSearchResults(pageNumber);
