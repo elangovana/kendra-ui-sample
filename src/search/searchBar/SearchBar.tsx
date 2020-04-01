@@ -9,7 +9,7 @@ import {
 } from "react-bootstrap";
 
 import searchImage from "../images/search-image.svg";
-import "../search.css";
+import "../search.scss";
 
 interface SearchBarProps {
   onSubmit: (queryText: string, pageNumber: number) => void;
