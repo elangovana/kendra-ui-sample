@@ -4,6 +4,11 @@ The Kendra search app is a set of sample files that developers can use to build 
 
 Customers can choose to copy individual components or the entire search experience and plug them into their web application.  
 
+## Set up
+
+```bash
+npm install
+```
 
  ## Available Scripts
 
