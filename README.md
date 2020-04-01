@@ -4,6 +4,44 @@ The Kendra search app is a set of sample files that developers can use to build 
 
 Customers can choose to copy individual components or the entire search experience and plug them into their web application.  
 
+
+ ## Available Scripts
+
+ In the project directory, you can run:
+
+ ### `npm start`
+
+ Runs the app in the development mode.<br />
+ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+
+ The page will reload if you make edits.<br />
+ You will also see any lint errors in the console.
+
+ ### `npm test`
+
+ Launches the test runner in the interactive watch mode.<br />
+ See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+
+ ### `npm run build`
+
+ Builds the app for production to the `build` folder.<br />
+ It correctly bundles React in production mode and optimizes the build for the best performance.
+
+ The build is minified and the filenames include the hashes.<br />
+ Your app is ready to be deployed!
+
+ See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+
+ ### `npm run eject`
+
+ **Note: this is a one-way operation. Once you `eject`, you canâ€™t go back!**
+
+ If you arenâ€™t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+
+ Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point youâ€™re on your own.
+
+ You donâ€™t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldnâ€™t feel obligated to use this feature. However we understand that this tool wouldnâ€™t be useful if you couldnâ€™t customize it when you are ready for it.
+
 ## License Summary
 
 This sample code is made available under a modified MIT license. See the LICENSE file.
@@ -45,7 +83,7 @@ We will dive into these components in more detail in the *Architecture *section 
 ### Prerequisites/dependencies
 
 * Existing React web application
-    * If you don’t have a React web application already, please refer to this guide (https://reactjs.org/docs/create-a-new-react-app.html)for more information on how to create a React web application. Alternatively you can follow steps to set up a new react development environment right below.
+    * If you donï¿½t have a React web application already, please refer to this guide (https://reactjs.org/docs/create-a-new-react-app.html)for more information on how to create a React web application. Alternatively you can follow steps to set up a new react development environment right below.
 * Ensure your development environment has the following frameworks/libraries:
     * React (version 16.8.10)
     * Bootstrap (version: 4.3.1)
@@ -63,13 +101,13 @@ We will dive into these components in more detail in the *Architecture *section 
 ### Steps
 
 * Once you finish setting up your development environment, download the source files from this repository and move them into your main source directory. 
-    * The easiest method is to add the entire folder titled “search” to your source.
+    * The easiest method is to add the entire folder titled ï¿½searchï¿½ to your source.
 * Choose an existing page or create a new page for search.
     * Alternatively, you can add the search experience to an existing page. To do this, you will render the Search.tsx component (mentioned below in *Architecture*) inside of the existing page.
 * Add the search.tsx component to the page.
 * Build the changes into your package and go to the search page on your localhost.
-* You will see a search input box. Enter some text into the input box - for example, “Rome” - and press enter.  
-    * For the purposes of this sample application, we have pre-populated the application with sample data about Rome. See “Sample data” in the *Architecture* section below for more info.
+* You will see a search input box. Enter some text into the input box - for example, ï¿½Romeï¿½ - and press enter.  
+    * For the purposes of this sample application, we have pre-populated the application with sample data about Rome. See ï¿½Sample dataï¿½ in the *Architecture* section below for more info.
 * You will see the search results populated on the page. 
 * More information on each of the search result components is provided in the *Architecture *section below.
 * Note: The results you see are from sample data provided for demonstration purposes . To use the search application with your Indexes and Data sources configured in Amazon Kendra, finish setting up the AWS SDK and integrate the API.
@@ -98,16 +136,16 @@ As mentioned in the Overview section, the provided search files and supporting c
 
 * file path: search/searchBar/Searchbar.tsx
 * This is the component that goes on the top of the page, and contains the UI for the input search box.
-* The function “onSearch” is a hook to the main function in Search.tsx to make the API call. It picks up the text entered in the search box.
+* The function ï¿½onSearchï¿½ is a hook to the main function in Search.tsx to make the API call. It picks up the text entered in the search box.
 
 **Results Section - resultspanel.tsx**
 
 * file path: search/resultsPanel/resultsPanel.tsx
 * This larger section is used to display the results returned by the query API, separated into three different result elements.
-* Each of these result elements utilizes a set of shared components for features like highlighting, titles, links, feedback buttons, etc.  The shared components are located in the path “search/resultsPanel/components.”   The shared components must be present for each of the result elements to work.
+* Each of these result elements utilizes a set of shared components for features like highlighting, titles, links, feedback buttons, etc.  The shared components are located in the path ï¿½search/resultsPanel/components.ï¿½   The shared components must be present for each of the result elements to work.
     * Make sure to add the api integration to submit feedback in Feedback.tsx file.
 * The first result element is suggested answers 
-    * Categorized as “ANSWER” in the API response
+    * Categorized as ï¿½ANSWERï¿½ in the API response
     * file path: search/resultsPanel/topResults.tsx
     * This element sits at the top of the results section and provides up to three suggested answers from Amazon Kendra.
 * The second result element is frequently asked questions 
@@ -123,7 +161,7 @@ As mentioned in the Overview section, the provided search files and supporting c
 
 * file path: search/pagination/Pagination.tsx
 * This is the component that goes at the bottom of the page below all of the search results.  This contains the UI to display page numbers and pagination controls.
-* The function “onPageSelected” is a hook to the main function in Search.tsx to make the query API call. This sets the correct page number and passes it to the main function.
+* The function ï¿½onPageSelectedï¿½ is a hook to the main function in Search.tsx to make the query API call. This sets the correct page number and passes it to the main function.
 
 **Images and utility files**
 
