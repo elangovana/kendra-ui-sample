@@ -1,0 +1,6 @@
+The sample data provided in the files exampleData1.ts and exampleData2.ts represent mock responses from the Amazon Kendra query API. The files consist of data from https://en.wikipedia.org/, mashed up, and formatted to look like an API response from Amazon Kendra. The sample data provided in the two files is provided under the Creative Commons Attribution-ShareAlike License (https://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License), pulled from the following locations:
+o	https://en.wikipedia.org/wiki/Portal:Ancient_Rome 
+o	https://en.wikipedia.org/wiki/Battle_of_Mount_Algidus 
+o	https://en.wikipedia.org/wiki/Battle_of_Arausio 
+o	https://en.wikipedia.org/wiki/Cilician_pirates#Rise_of_piracy 
+o	https://en.wikipedia.org/wiki/Culture_of_ancient_Rome 
