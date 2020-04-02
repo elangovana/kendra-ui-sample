@@ -9,15 +9,13 @@ import {
   QueryResultItemList
 } from "./kendraTypes";
 
-import { getSearchResults } from "./exampleData/getSearchResults";
-
 import SearchBar from "./searchBar/SearchBar";
 import ResultPanel from "./resultsPanel/ResultPanel";
 import Pagination from "./pagination/Pagination";
+import config from '../config';
 
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./search.scss";
-
 interface SearchProps {}
 
 interface SearchState {
@@ -45,14 +43,16 @@ export default class Search extends React.Component<SearchProps, SearchState> {
     };
   }
 
-  getResults = (queryText: string, pageNumber: number = 1) => {
+  getResults = async (queryText: string, pageNumber: number = 1) => {
     this.setState({ dataReady: false });
 
-    /*
-      TODO: replace the line below with the api call
-      Kendra.query({ IndexId: indexId, QueryText: queryText, PageNumber: pageNumber})    
-    */
-    const results = getSearchResults(pageNumber);
+    let results: any = {};
+    try {
+      const response = await fetch(`${config.baseUrl}/?queryText=${queryText}&pageNumber=${pageNumber}`);
+      results = await response.json();
+    }catch(error){
+      console.log(error);
+    }
 
     const tempTopResults: QueryResultItemList = [];
     const tempFAQResults: QueryResultItemList = [];

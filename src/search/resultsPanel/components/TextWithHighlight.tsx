@@ -37,7 +37,8 @@ export default class TextHighlights extends React.Component<
           highlight1.BeginOffset - highlight2.BeginOffset
       )
     );
-    const lastHighlight = sortedHighlights[sortedHighlights.length - 1];
+
+    const lastHighlight = sortedHighlights.length > 0 ? sortedHighlights[sortedHighlights.length - 1] : null;
 
     return (
       <span className={className}>
@@ -52,7 +53,7 @@ export default class TextHighlights extends React.Component<
             <HighlightedText text={text} highlight={highlight} />
           </span>
         ))}
-        <span>{text!.substring(lastHighlight.EndOffset)}</span>
+        {lastHighlight && <span>{text!.substring(lastHighlight.EndOffset)}</span>}
       </span>
     );
   }
